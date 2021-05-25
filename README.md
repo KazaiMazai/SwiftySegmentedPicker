@@ -36,6 +36,12 @@ struct SegmentedPickerExample: View {
 
 ```
 
+to get the following look:
+
+![alt text](https://user-images.githubusercontent.com/2588468/119536850-2c3cf780-bd92-11eb-8908-56e1434dc14e.png)
+
+
+
 or this guy with a capsule as selection view:
 
 
@@ -66,3 +72,8 @@ struct SegmentedPickerExample: View {
 }
 
 ```
+
+
+
+![alt text](https://user-images.githubusercontent.com/2588468/119536944-41198b00-bd92-11eb-993e-a0c1a402c714.png)
+
