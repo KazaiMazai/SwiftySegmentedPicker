@@ -77,3 +77,17 @@ struct SegmentedPickerExample: View {
 
 ![alt text](https://user-images.githubusercontent.com/2588468/119536944-41198b00-bd92-11eb-993e-a0c1a402c714.png)
 
+
+## Installation
+
+### Swift Package Manager.
+
+SwiftySegmentedPicker is available through Swift Package Manager. 
+To install it, in Xcode 11.0 or later select File > Swift Packages > Add Package Dependency... 
+
+and add SwiftySegmentedPicker repository URL:
+
+```
+https://github.com/KazaiMazai/SwiftySegmentedPicker.git
+```
+ 
