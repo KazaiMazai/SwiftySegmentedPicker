@@ -1,4 +1,4 @@
-# SegmentedPicker
+# SwiftySegmentedPicker
 
 Custom segmented picker for SwiftUI
 
