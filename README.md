@@ -38,9 +38,9 @@ struct SegmentedPickerExample: View {
 
 to get the following look:
 
-![alt text](https://user-images.githubusercontent.com/2588468/119536850-2c3cf780-bd92-11eb-8908-56e1434dc14e.png)
-
-
+<p align="left">
+  <img src="https://user-images.githubusercontent.com/2588468/119536850-2c3cf780-bd92-11eb-8908-56e1434dc14e.png" width="250" title="hover text">
+</p>
 
 or this guy with a capsule as selection view:
 
@@ -73,10 +73,9 @@ struct SegmentedPickerExample: View {
 
 ```
 
-
-
-![alt text](https://user-images.githubusercontent.com/2588468/119536944-41198b00-bd92-11eb-993e-a0c1a402c714.png)
-
+<p align="left">
+  <img src="https://user-images.githubusercontent.com/2588468/119536944-41198b00-bd92-11eb-993e-a0c1a402c714.png" width="300" title="hover text">
+</p>
 
 ## Installation
 
