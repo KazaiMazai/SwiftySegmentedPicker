@@ -89,4 +89,7 @@ and add SwiftySegmentedPicker repository URL:
 ```
 https://github.com/KazaiMazai/SwiftySegmentedPicker.git
 ```
- 
+
+## Licensing
+
+SwiftySegmentedPicker is licensed under MIT license.
