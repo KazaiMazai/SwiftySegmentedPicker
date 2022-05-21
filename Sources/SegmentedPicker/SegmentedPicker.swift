@@ -20,9 +20,11 @@ public struct SegmentedPicker<Element, Content, Selection>: View
     private let data: Data
     private let selection: () -> Selection
     private let content: (Data.Element, Bool) -> Content
+    private let selectionAlignment: VerticalAlignment
 
     public init(_ data: Data,
                 selectedIndex: Binding<Data.Index?>,
+                selectionAlignment: VerticalAlignment = .center,
                 @ViewBuilder content: @escaping (Data.Element, Bool) -> Content,
                 @ViewBuilder selection: @escaping () -> Selection) {
 
@@ -32,11 +34,12 @@ public struct SegmentedPicker<Element, Content, Selection>: View
         self._selectedIndex = selectedIndex
         self._frames = State(wrappedValue: Array(repeating: .zero,
                                                  count: data.count))
+        self.selectionAlignment = selectionAlignment
     }
 
     public var body: some View {
         ZStack(alignment: Alignment(horizontal: .horizontalCenterAlignment,
-                                    vertical: .center)) {
+                                    vertical: selectionAlignment)) {
 
             if let selectedIndex = selectedIndex {
                 selection()
