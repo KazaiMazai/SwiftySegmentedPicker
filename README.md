@@ -8,14 +8,15 @@ Custom segmented picker for SwiftUI
 
 struct SegmentedPickerExample: View {
     let titles: [String]
-    @State var selectedIndex: Int = 0
+    @State var selectedIndex: Int?
 
     var body: some View {
         SegmentedPicker(
             titles,
             selectedIndex: Binding(
                 get: { selectedIndex },
-                set: { selectedIndex = $0 ?? 0 }),
+                set: { selectedIndex = $0 }),
+            selectionAlignment: .bottom,
             content: { item, isSelected in
                 Text(item)
                     .foregroundColor(isSelected ? Color.black : Color.gray )
@@ -25,11 +26,12 @@ struct SegmentedPickerExample: View {
             selection: {
                 VStack(spacing: 0) {
                     Spacer()
-                    Rectangle()
-                        .fill(Color.black)
-                        .frame(height: 1)
+                    Color.black.frame(height: 1)
                 }
             })
+            .onAppear {
+                selectedIndex = 0
+            }
             .animation(.easeInOut(duration: 0.3))
     }
 }
@@ -49,14 +51,14 @@ or this guy with a capsule as selection view:
 
 struct SegmentedPickerExample: View {
     let titles: [String]
-    @State var selectedIndex: Int = 0
+    @State var selectedIndex: Int?
 
     var body: some View {
         SegmentedPicker(
             titles,
             selectedIndex: Binding(
                 get: { selectedIndex },
-                set: { selectedIndex = $0 ?? 0 }),
+                set: { selectedIndex = $0 }),
             content: { item, isSelected in
                 Text(item)
                     .foregroundColor(isSelected ? Color.white : Color.gray )
@@ -67,6 +69,9 @@ struct SegmentedPickerExample: View {
                 Capsule()
                     .fill(Color.gray)
             })
+            .onAppear {
+                selectedIndex = 0
+            }
             .animation(.easeInOut(duration: 0.3))
     }
 }
